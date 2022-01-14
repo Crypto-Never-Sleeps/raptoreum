@@ -465,11 +465,11 @@ public:
         nDefaultPort = 10226;
         nPruneAfterHeight = 100000;
 
-        FindMainNetGenesisBlock(1642165200, 0x20001fff, "main");
-        //genesis = CreateGenesisBlock(1614369600, 1130, 0x20001fff, 4, 5000 * COIN);
-        //consensus.hashGenesisBlock = genesis.GetHash();
-        //assert(consensus.hashGenesisBlock == uint256S("0xb79e5df07278b9567ada8fc655ffbfa9d3f586dc38da3dd93053686f41caeea0"));
-        //assert(genesis.hashMerkleRoot == uint256S("0x87a48bc22468acdd72ee540aab7c086a5bbcddc12b51c6ac925717a74c269453"));
+        //FindMainNetGenesisBlock(1642165200, 0x20001fff, "main");
+        genesis = CreateGenesisBlock(1642165200, 3147, 0x20001fff, 1, 5000 * COIN);
+        consensus.hashGenesisBlock = genesis.GetHash();
+        assert(consensus.hashGenesisBlock == uint256S("0x0019c9f1b2dab929977745543a093277862817b262f38023ee03339d4c9c9b9a"));
+        assert(genesis.hashMerkleRoot == uint256S("0x55153a63cd3378c31bc04d6eaf44a3a47ac8eecd6a8863b2af9655695fb67a8d"));
 
         vSeeds.emplace_back("seed00.raptoreum.com", true);
         vSeeds.emplace_back("seed01.raptoreum.com", true);
